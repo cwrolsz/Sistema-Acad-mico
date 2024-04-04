@@ -16,13 +16,14 @@ INSTALLED_APPS = [
 #o template usado
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SssionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Adicionando o SessionMiddleware aqui
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Depois do SessionMiddleware
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
 {
@@ -48,15 +49,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'academico i',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
-            'NAME': 'biblioteca_n',
-            'USER': 'postgres',
-            'PASSWORD': '123456',
-            'HOST': 'localhost',
-            'PORT': '5432',
-}
-}
 AUTH_PASSWORD_VALIDATORS = [
 {
     'NAME':
