@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Sistema Acadêmico</title>
+    <title>Pessoas</title>
 </head>
 <body>
 
@@ -70,17 +71,47 @@
     </div>
 </nav>
 
-<div class="container mt-5">
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Olá, é bom te ver por aqui</h1>
-        <p class="lead">Esta é a página inicial do Sistema Acadêmico</p>
-        <p class="lead">Seja Bem Vindo(A)!</p>
+    <div class="container mt-5">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <b><li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red;">{{ message }}</li></b>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h2 class="mb-4">Tabela de Pessoas</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Nome do Pai</th>
+                    <th scope="col">Nome da Mãe</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Ocupação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pessoa in pessoa %}
+                    <tr>
+                        <td>{{ pessoa.nome }}</td>
+                        <td>{{ pessoa.nome_do_pai }}</tr>
+                        <td>{{ pessoa.nome_da_mae }}</tr>
+                        <td>{{ pessoa.cpf }}</td>
+                        <td>{{ pessoa.data_nasc }}</td>
+                        <td>{{ pessoa.email }}</td>
+                        <td>{{ pessoa.cidade }}</td>
+                        <td>{{ pessoa.ocupacao }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
-</div>
-
-<!-- Incluindo jQuery e Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Incluindo jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
