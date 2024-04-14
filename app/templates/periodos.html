@@ -83,13 +83,15 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                 </tr>
             </thead>
             <tbody>
                 {% for periodo in periodo %}
                     <tr>
-                        <td>{{ periodo.nome }}</td>
+                        <th><strong>{{ periodo.id }}</strong></th>
+                        <th>{{ periodo.nome }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Curso</th>
                     <th scope="col">Disciplina</th>
                     <th scope="col">Pessoa</th>
@@ -92,10 +93,11 @@
             <tbody>
                 {% for frequencia in frequencia %}
                     <tr>
-                        <td>{{ frequencia.curso }}</td>
-                        <td>{{ frequencia.disciplina }}</tr>
-                        <td>{{ frequencia.pessoa }}</td>
-                        <td>{{ frequencia.numero_faltas }}</td>
+                        <th><strong>{{ frequencia.id }}</strong></th>
+                        <th>{{ frequencia.curso }}</th>
+                        <th>{{ frequencia.disciplina }}</th>
+                        <th>{{ frequencia.pessoa }}</th>
+                        <th>{{ frequencia.numero_faltas }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

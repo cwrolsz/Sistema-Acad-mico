@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Descrição</th>
                     <th scope="col">Data</th>
                     <th scope="col">Curso</th>
@@ -93,11 +94,12 @@
             <tbody>
                 {% for ocorrencia in ocorrencia %}
                     <tr>
-                        <td>{{ ocorrencia.descricao }}</td>
-                        <td>{{ ocorrencia.data }}</tr>
-                        <td>{{ ocorrencia.curso }}</td>
-                        <td>{{ ocorrencia.disciplina }}</td>
-                        <td>{{ ocorrencia.pessoa }}</td>
+                        <th><strong>{{ ocorrencia.id }}</strong></th>
+                        <th>{{ ocorrencia.descricao }}</th>
+                        <th>{{ ocorrencia.data }}</th>
+                        <th>{{ ocorrencia.curso }}</th>
+                        <th>{{ ocorrencia.disciplina }}</th>
+                        <th>{{ ocorrencia.pessoa }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

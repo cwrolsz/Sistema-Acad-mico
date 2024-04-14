@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">UF</th>
                 </tr>
@@ -90,8 +91,9 @@
             <tbody>
                 {% for cidade in cidade %}
                     <tr>
-                        <td>{{ cidade.nome }}</td>
-                        <td>{{ cidade.uf }}</td>
+                        <th><strong>{{ cidade.id }}</strong></th>
+                        <th>{{ cidade.nome }}</th>
+                        <th>{{ cidade.uf }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

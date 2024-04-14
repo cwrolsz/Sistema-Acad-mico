@@ -83,14 +83,17 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                 </tr>
             </thead>
             <tbody>
                 {% for areas in area %}
                     <tr>
-                        <td>{{ areas.nome }}</td>
+                        <th><strong>{{ areas.id }}</strong></th>
+                        <th>{{ areas.nome }}</th>
                     </tr>
+                    
                 {% endfor %}
             </tbody>
         </table>

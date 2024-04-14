@@ -83,13 +83,15 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                 </tr>
             </thead>
             <tbody>
                 {% for manter_avaliacao in manter_avaliacao %}
                     <tr>
-                        <td>{{ manter_avaliacao.nome }}</td>
+                        <th><strong>{{ manter_avaliacao.id }}</strong></th>
+                        <th>{{ manter_avaliacao.nome }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

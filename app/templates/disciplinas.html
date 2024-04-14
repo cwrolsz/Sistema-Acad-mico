@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Área do Saber</th>
                 </tr>
@@ -90,8 +91,9 @@
             <tbody>
                 {% for disciplina in disciplina %}
                     <tr>
-                        <td>{{ disciplina.nome }}</td>
-                        <td>{{ disciplina.area_saber }}</td>
+                        <th><strong>{{ disciplina.id }}</strong></th>
+                        <th>{{ disciplina.nome }}</th>
+                        <th>{{ disciplina.area_saber }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

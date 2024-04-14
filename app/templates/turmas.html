@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Turno</th>
                 </tr>
@@ -90,8 +91,9 @@
             <tbody>
                 {% for turma in turma %}
                     <tr>
-                        <td>{{ turma.nome }}</td>
-                        <td>{{ turma.turno }}</tr>
+                        <th><strong>{{ turma.id }}</strong></th>
+                        <th>{{ turma.nome }}</th>
+                        <th>{{ turma.turno }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

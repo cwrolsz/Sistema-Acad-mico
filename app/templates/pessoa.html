@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Nome do Pai</th>
                     <th scope="col">Nome da Mãe</th>
@@ -96,14 +97,15 @@
             <tbody>
                 {% for pessoa in pessoa %}
                     <tr>
-                        <td>{{ pessoa.nome }}</td>
-                        <td>{{ pessoa.nome_do_pai }}</tr>
-                        <td>{{ pessoa.nome_da_mae }}</tr>
-                        <td>{{ pessoa.cpf }}</td>
-                        <td>{{ pessoa.data_nasc }}</td>
-                        <td>{{ pessoa.email }}</td>
-                        <td>{{ pessoa.cidade }}</td>
-                        <td>{{ pessoa.ocupacao }}</td>
+                        <th><strong>{{ pessoa.id }}</strong></th>
+                        <th>{{ pessoa.nome }}</th>
+                        <th>{{ pessoa.nome_do_pai }}</th>
+                        <th>{{ pessoa.nome_da_mae }}</th>
+                        <th>{{ pessoa.cpf }}</th>
+                        <th>{{ pessoa.data_nasc }}</th>
+                        <th>{{ pessoa.email }}</th>
+                        <th>{{ pessoa.cidade }}</th>
+                        <th>{{ pessoa.ocupacao }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

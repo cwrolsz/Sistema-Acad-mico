@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Disciplina</th>
                     <th scope="col">Carga Horária</th>
                     <th scope="col">Curso</th>
@@ -92,10 +93,11 @@
             <tbody>
                 {% for manter_disciplina in manter_disciplina %}
                     <tr>
-                        <td>{{ manter_disciplina.disciplina }}</td>
-                        <td>{{ manter_disciplina.carga_horaria }}</tr>
-                        <td>{{ manter_disciplina.curso }}</td>
-                        <td>{{ manter_disciplina.periodo }}</td>
+                        <th><strong>{{ manter_disciplina.id }}</strong></th>
+                        <th>{{ manter_disciplina.disciplina }}</th>
+                        <th>{{ manter_disciplina.carga_horaria }}</th>
+                        <th>{{ manter_disciplina.curso }}</th>
+                        <th>{{ manter_disciplina.periodo }}</th>
                     </tr>
                 {% endfor %}
             </tbody>

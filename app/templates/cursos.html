@@ -83,6 +83,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Carga Horária</th>
                     <th scope="col">Duração</th>
@@ -93,11 +94,12 @@
             <tbody>
                 {% for curso in curso %}
                     <tr>
-                        <td>{{ curso.nome }}</td>
-                        <td>{{ curso.carga_horaria }}</tr>
-                        <td>{{ curso.duracao }}</td>
-                        <td>{{ curso.area }}</td>
-                        <td>{{ curso.instituicao }}</td>
+                        <th><strong>{{ curso.id }}</strong></th>
+                        <th>{{ curso.nome }}</th>
+                        <th>{{ curso.carga_horaria_total }}</th>
+                        <th>{{ curso.duracao_meses }}</th>
+                        <th>{{ curso.area_saber }}</th>
+                        <th>{{ curso.instituicao }}</th>
                     </tr>
                 {% endfor %}
             </tbody>
